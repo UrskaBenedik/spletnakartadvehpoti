@@ -35,14 +35,14 @@
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet-search.js"></script>
         <script src="data/mkrkd2018izbranivnosi_1.js"></script>
-        <script src="data/Sled_GM4OTRENINGtracks_2.js"></script>
-        <script src="data/Sled_GM4OTRENINGwaypoints_3.js"></script>
-        <script src="data/Sled_T242014tracks_4.js"></script>
-        <script src="data/Sled_T242014waypoints_5.js"></script>
+        <script src="data/Trikaplaninskapottracks_2.js"></script>
+        <script src="data/Trikaplaninskapotwaypoints_3.js"></script>
+        <script src="data/Gorskimaratontirihobintracks_4.js"></script>
+        <script src="data/Gorskimaratontirihobinwaypoints_5.js"></script>
         <script>
         var map = L.map('map', {
-            zoomControl:true, maxZoom:28, minZoom:12
-        }).fitBounds([[44.99785166200634,13.318002052992952],[47.29259789249572,16.60961970660042]]);
+            zoomControl:true, maxZoom:28, minZoom:10
+        }).fitBounds([[45.92210197292894,13.11389424740727],[47.06947508817365,14.759703074211028]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -56,7 +56,7 @@
             pane: 'pane_OpenStreetMap_0',
             opacity: 1.0,
             attribution: '',
-            minZoom: 12,
+            minZoom: 10,
             maxZoom: 28,
             minNativeZoom: 0,
             maxNativeZoom: 19
@@ -126,7 +126,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(231,25,142,1.0)',
+                fillColor: 'rgba(91,167,221,1.0)',
                 interactive: true,
             }
                     break;
@@ -142,7 +142,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(179,232,22,1.0)',
+                fillColor: 'rgba(214,73,99,1.0)',
                 interactive: true,
             }
                     break;
@@ -158,7 +158,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(75,203,53,1.0)',
+                fillColor: 'rgba(235,70,199,1.0)',
                 interactive: true,
             }
                     break;
@@ -174,7 +174,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(39,236,128,1.0)',
+                fillColor: 'rgba(201,201,45,1.0)',
                 interactive: true,
             }
                     break;
@@ -190,7 +190,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(40,203,212,1.0)',
+                fillColor: 'rgba(152,59,210,1.0)',
                 interactive: true,
             }
                     break;
@@ -206,7 +206,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(129,105,207,1.0)',
+                fillColor: 'rgba(70,201,175,1.0)',
                 interactive: true,
             }
                     break;
@@ -222,7 +222,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(207,90,230,1.0)',
+                fillColor: 'rgba(109,227,30,1.0)',
                 interactive: true,
             }
                     break;
@@ -238,7 +238,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(227,167,56,1.0)',
+                fillColor: 'rgba(70,204,96,1.0)',
                 interactive: true,
             }
                     break;
@@ -254,7 +254,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(239,48,37,1.0)',
+                fillColor: 'rgba(69,66,223,1.0)',
                 interactive: true,
             }
                     break;
@@ -280,7 +280,7 @@
         });
         bounds_group.addLayer(layer_mkrkd2018izbranivnosi_1);
         map.addLayer(layer_mkrkd2018izbranivnosi_1);
-        function pop_Sled_GM4OTRENINGtracks_2(feature, layer) {
+        function pop_Trikaplaninskapottracks_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
@@ -325,192 +325,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Sled_GM4OTRENINGtracks_2_0() {
+        function style_Trikaplaninskapottracks_2_0() {
             return {
-                pane: 'pane_Sled_GM4OTRENINGtracks_2',
-                opacity: 1,
-                color: 'rgba(225,89,137,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 3.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Sled_GM4OTRENINGtracks_2');
-        map.getPane('pane_Sled_GM4OTRENINGtracks_2').style.zIndex = 402;
-        map.getPane('pane_Sled_GM4OTRENINGtracks_2').style['mix-blend-mode'] = 'normal';
-        var layer_Sled_GM4OTRENINGtracks_2 = new L.geoJson(json_Sled_GM4OTRENINGtracks_2, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Sled_GM4OTRENINGtracks_2',
-            layerName: 'layer_Sled_GM4OTRENINGtracks_2',
-            pane: 'pane_Sled_GM4OTRENINGtracks_2',
-            onEachFeature: pop_Sled_GM4OTRENINGtracks_2,
-            style: style_Sled_GM4OTRENINGtracks_2_0,
-        });
-        bounds_group.addLayer(layer_Sled_GM4OTRENINGtracks_2);
-        map.addLayer(layer_Sled_GM4OTRENINGtracks_2);
-        function pop_Sled_GM4OTRENINGwaypoints_3(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ele'] !== null ? autolinker.link(feature.properties['ele'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['time'] !== null ? autolinker.link(feature.properties['time'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['magvar'] !== null ? autolinker.link(feature.properties['magvar'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['geoidheight'] !== null ? autolinker.link(feature.properties['geoidheight'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cmt'] !== null ? autolinker.link(feature.properties['cmt'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['desc'] !== null ? autolinker.link(feature.properties['desc'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['src'] !== null ? autolinker.link(feature.properties['src'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link1_href'] !== null ? autolinker.link(feature.properties['link1_href'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link1_text'] !== null ? autolinker.link(feature.properties['link1_text'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link1_type'] !== null ? autolinker.link(feature.properties['link1_type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link2_href'] !== null ? autolinker.link(feature.properties['link2_href'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link2_text'] !== null ? autolinker.link(feature.properties['link2_text'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link2_type'] !== null ? autolinker.link(feature.properties['link2_type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sym'] !== null ? autolinker.link(feature.properties['sym'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fix'] !== null ? autolinker.link(feature.properties['fix'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sat'] !== null ? autolinker.link(feature.properties['sat'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['hdop'] !== null ? autolinker.link(feature.properties['hdop'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['vdop'] !== null ? autolinker.link(feature.properties['vdop'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['pdop'] !== null ? autolinker.link(feature.properties['pdop'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ageofdgpsdata'] !== null ? autolinker.link(feature.properties['ageofdgpsdata'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['dgpsid'] !== null ? autolinker.link(feature.properties['dgpsid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_Sled_GM4OTRENINGwaypoints_3_0() {
-            return {
-                pane: 'pane_Sled_GM4OTRENINGwaypoints_3',
-                radius: 6.000000000000002,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(0,0,0,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Sled_GM4OTRENINGwaypoints_3');
-        map.getPane('pane_Sled_GM4OTRENINGwaypoints_3').style.zIndex = 403;
-        map.getPane('pane_Sled_GM4OTRENINGwaypoints_3').style['mix-blend-mode'] = 'normal';
-        var layer_Sled_GM4OTRENINGwaypoints_3 = new L.geoJson(json_Sled_GM4OTRENINGwaypoints_3, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Sled_GM4OTRENINGwaypoints_3',
-            layerName: 'layer_Sled_GM4OTRENINGwaypoints_3',
-            pane: 'pane_Sled_GM4OTRENINGwaypoints_3',
-            onEachFeature: pop_Sled_GM4OTRENINGwaypoints_3,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Sled_GM4OTRENINGwaypoints_3_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_Sled_GM4OTRENINGwaypoints_3);
-        map.addLayer(layer_Sled_GM4OTRENINGwaypoints_3);
-        function pop_Sled_T242014tracks_4(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cmt'] !== null ? autolinker.link(feature.properties['cmt'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['desc'] !== null ? autolinker.link(feature.properties['desc'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['src'] !== null ? autolinker.link(feature.properties['src'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link1_href'] !== null ? autolinker.link(feature.properties['link1_href'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link1_text'] !== null ? autolinker.link(feature.properties['link1_text'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link1_type'] !== null ? autolinker.link(feature.properties['link1_type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link2_href'] !== null ? autolinker.link(feature.properties['link2_href'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link2_text'] !== null ? autolinker.link(feature.properties['link2_text'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['link2_type'] !== null ? autolinker.link(feature.properties['link2_type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['number'] !== null ? autolinker.link(feature.properties['number'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gpxx_TrackExtension'] !== null ? autolinker.link(feature.properties['gpxx_TrackExtension'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_Sled_T242014tracks_4_0() {
-            return {
-                pane: 'pane_Sled_T242014tracks_4',
+                pane: 'pane_Trikaplaninskapottracks_2',
                 opacity: 1,
                 color: 'rgba(37,161,238,1.0)',
                 dashArray: '',
@@ -521,21 +338,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Sled_T242014tracks_4');
-        map.getPane('pane_Sled_T242014tracks_4').style.zIndex = 404;
-        map.getPane('pane_Sled_T242014tracks_4').style['mix-blend-mode'] = 'normal';
-        var layer_Sled_T242014tracks_4 = new L.geoJson(json_Sled_T242014tracks_4, {
+        map.createPane('pane_Trikaplaninskapottracks_2');
+        map.getPane('pane_Trikaplaninskapottracks_2').style.zIndex = 402;
+        map.getPane('pane_Trikaplaninskapottracks_2').style['mix-blend-mode'] = 'normal';
+        var layer_Trikaplaninskapottracks_2 = new L.geoJson(json_Trikaplaninskapottracks_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sled_T242014tracks_4',
-            layerName: 'layer_Sled_T242014tracks_4',
-            pane: 'pane_Sled_T242014tracks_4',
-            onEachFeature: pop_Sled_T242014tracks_4,
-            style: style_Sled_T242014tracks_4_0,
+            dataVar: 'json_Trikaplaninskapottracks_2',
+            layerName: 'layer_Trikaplaninskapottracks_2',
+            pane: 'pane_Trikaplaninskapottracks_2',
+            onEachFeature: pop_Trikaplaninskapottracks_2,
+            style: style_Trikaplaninskapottracks_2_0,
         });
-        bounds_group.addLayer(layer_Sled_T242014tracks_4);
-        map.addLayer(layer_Sled_T242014tracks_4);
-        function pop_Sled_T242014waypoints_5(feature, layer) {
+        bounds_group.addLayer(layer_Trikaplaninskapottracks_2);
+        map.addLayer(layer_Trikaplaninskapottracks_2);
+        function pop_Trikaplaninskapotwaypoints_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['ele'] !== null ? autolinker.link(feature.properties['ele'].toLocaleString()) : '') + '</td>\
@@ -610,10 +427,10 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Sled_T242014waypoints_5_0() {
+        function style_Trikaplaninskapotwaypoints_3_0() {
             return {
-                pane: 'pane_Sled_T242014waypoints_5',
-                radius: 6.000000000000002,
+                pane: 'pane_Trikaplaninskapotwaypoints_3',
+                radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -622,30 +439,213 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,120,180,1.0)',
+                fillColor: 'rgba(164,113,88,1.0)',
                 interactive: true,
             }
         }
-        map.createPane('pane_Sled_T242014waypoints_5');
-        map.getPane('pane_Sled_T242014waypoints_5').style.zIndex = 405;
-        map.getPane('pane_Sled_T242014waypoints_5').style['mix-blend-mode'] = 'normal';
-        var layer_Sled_T242014waypoints_5 = new L.geoJson(json_Sled_T242014waypoints_5, {
+        map.createPane('pane_Trikaplaninskapotwaypoints_3');
+        map.getPane('pane_Trikaplaninskapotwaypoints_3').style.zIndex = 403;
+        map.getPane('pane_Trikaplaninskapotwaypoints_3').style['mix-blend-mode'] = 'normal';
+        var layer_Trikaplaninskapotwaypoints_3 = new L.geoJson(json_Trikaplaninskapotwaypoints_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sled_T242014waypoints_5',
-            layerName: 'layer_Sled_T242014waypoints_5',
-            pane: 'pane_Sled_T242014waypoints_5',
-            onEachFeature: pop_Sled_T242014waypoints_5,
+            dataVar: 'json_Trikaplaninskapotwaypoints_3',
+            layerName: 'layer_Trikaplaninskapotwaypoints_3',
+            pane: 'pane_Trikaplaninskapotwaypoints_3',
+            onEachFeature: pop_Trikaplaninskapotwaypoints_3,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Sled_T242014waypoints_5_0(feature));
+                return L.circleMarker(latlng, style_Trikaplaninskapotwaypoints_3_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Sled_T242014waypoints_5);
-        map.addLayer(layer_Sled_T242014waypoints_5);
+        bounds_group.addLayer(layer_Trikaplaninskapotwaypoints_3);
+        map.addLayer(layer_Trikaplaninskapotwaypoints_3);
+        function pop_Gorskimaratontirihobintracks_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['cmt'] !== null ? autolinker.link(feature.properties['cmt'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['desc'] !== null ? autolinker.link(feature.properties['desc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['src'] !== null ? autolinker.link(feature.properties['src'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link1_href'] !== null ? autolinker.link(feature.properties['link1_href'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link1_text'] !== null ? autolinker.link(feature.properties['link1_text'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link1_type'] !== null ? autolinker.link(feature.properties['link1_type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link2_href'] !== null ? autolinker.link(feature.properties['link2_href'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link2_text'] !== null ? autolinker.link(feature.properties['link2_text'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link2_type'] !== null ? autolinker.link(feature.properties['link2_type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['number'] !== null ? autolinker.link(feature.properties['number'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['gpxx_TrackExtension'] !== null ? autolinker.link(feature.properties['gpxx_TrackExtension'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Gorskimaratontirihobintracks_4_0() {
+            return {
+                pane: 'pane_Gorskimaratontirihobintracks_4',
+                opacity: 1,
+                color: 'rgba(184,8,116,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Gorskimaratontirihobintracks_4');
+        map.getPane('pane_Gorskimaratontirihobintracks_4').style.zIndex = 404;
+        map.getPane('pane_Gorskimaratontirihobintracks_4').style['mix-blend-mode'] = 'normal';
+        var layer_Gorskimaratontirihobintracks_4 = new L.geoJson(json_Gorskimaratontirihobintracks_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Gorskimaratontirihobintracks_4',
+            layerName: 'layer_Gorskimaratontirihobintracks_4',
+            pane: 'pane_Gorskimaratontirihobintracks_4',
+            onEachFeature: pop_Gorskimaratontirihobintracks_4,
+            style: style_Gorskimaratontirihobintracks_4_0,
+        });
+        bounds_group.addLayer(layer_Gorskimaratontirihobintracks_4);
+        map.addLayer(layer_Gorskimaratontirihobintracks_4);
+        function pop_Gorskimaratontirihobinwaypoints_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ele'] !== null ? autolinker.link(feature.properties['ele'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['time'] !== null ? autolinker.link(feature.properties['time'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['magvar'] !== null ? autolinker.link(feature.properties['magvar'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['geoidheight'] !== null ? autolinker.link(feature.properties['geoidheight'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['cmt'] !== null ? autolinker.link(feature.properties['cmt'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['desc'] !== null ? autolinker.link(feature.properties['desc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['src'] !== null ? autolinker.link(feature.properties['src'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link1_href'] !== null ? autolinker.link(feature.properties['link1_href'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link1_text'] !== null ? autolinker.link(feature.properties['link1_text'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link1_type'] !== null ? autolinker.link(feature.properties['link1_type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link2_href'] !== null ? autolinker.link(feature.properties['link2_href'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link2_text'] !== null ? autolinker.link(feature.properties['link2_text'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['link2_type'] !== null ? autolinker.link(feature.properties['link2_type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['sym'] !== null ? autolinker.link(feature.properties['sym'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fix'] !== null ? autolinker.link(feature.properties['fix'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['sat'] !== null ? autolinker.link(feature.properties['sat'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['hdop'] !== null ? autolinker.link(feature.properties['hdop'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['vdop'] !== null ? autolinker.link(feature.properties['vdop'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['pdop'] !== null ? autolinker.link(feature.properties['pdop'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ageofdgpsdata'] !== null ? autolinker.link(feature.properties['ageofdgpsdata'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['dgpsid'] !== null ? autolinker.link(feature.properties['dgpsid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Gorskimaratontirihobinwaypoints_5_0() {
+            return {
+                pane: 'pane_Gorskimaratontirihobinwaypoints_5',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(141,90,153,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Gorskimaratontirihobinwaypoints_5');
+        map.getPane('pane_Gorskimaratontirihobinwaypoints_5').style.zIndex = 405;
+        map.getPane('pane_Gorskimaratontirihobinwaypoints_5').style['mix-blend-mode'] = 'normal';
+        var layer_Gorskimaratontirihobinwaypoints_5 = new L.geoJson(json_Gorskimaratontirihobinwaypoints_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Gorskimaratontirihobinwaypoints_5',
+            layerName: 'layer_Gorskimaratontirihobinwaypoints_5',
+            pane: 'pane_Gorskimaratontirihobinwaypoints_5',
+            onEachFeature: pop_Gorskimaratontirihobinwaypoints_5,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Gorskimaratontirihobinwaypoints_5_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Gorskimaratontirihobinwaypoints_5);
+        map.addLayer(layer_Gorskimaratontirihobinwaypoints_5);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -657,7 +657,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Sled_T242014waypoints_5.png" /> Sled_T24 2014 — waypoints': layer_Sled_T242014waypoints_5,'<img src="legend/Sled_T242014tracks_4.png" /> Sled_T24 2014 — tracks': layer_Sled_T242014tracks_4,'<img src="legend/Sled_GM4OTRENINGwaypoints_3.png" /> Sled_GM4O TRENING — waypoints': layer_Sled_GM4OTRENINGwaypoints_3,'<img src="legend/Sled_GM4OTRENINGtracks_2.png" /> Sled_GM4O TRENING — tracks': layer_Sled_GM4OTRENINGtracks_2,'mkrkd2018izbranivnosi<br /><table><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_arheološkanajdišča0.png" /></td><td>arheološka najdišča</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_drugiobjektiinnaprave1.png" /></td><td>drugi objekti in naprave</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_kulturnakrajina2.png" /></td><td>kulturna krajina</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_naseljainnjihovideli3.png" /></td><td>naselja in njihovi deli</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_ostalo4.png" /></td><td>ostalo</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_parkiinvrtovi5.png" /></td><td>parki in vrtovi</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_spominskiobjektiinkraji6.png" /></td><td>spominski objekti in kraji</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_stavbe7.png" /></td><td>stavbe</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_stavbesparkializvrtovi8.png" /></td><td>stavbe s parki ali z vrtovi</td></tr></table>': layer_mkrkd2018izbranivnosi_1,"OpenStreetMap": layer_OpenStreetMap_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Gorskimaratontirihobinwaypoints_5.png" /> Gorski maraton štirih občin — waypoints': layer_Gorskimaratontirihobinwaypoints_5,'<img src="legend/Gorskimaratontirihobintracks_4.png" /> Gorski maraton štirih občin — tracks': layer_Gorskimaratontirihobintracks_4,'<img src="legend/Trikaplaninskapotwaypoints_3.png" /> Tržiška planinska pot — waypoints': layer_Trikaplaninskapotwaypoints_3,'<img src="legend/Trikaplaninskapottracks_2.png" /> Tržiška planinska pot — tracks': layer_Trikaplaninskapottracks_2,'mkrkd2018izbranivnosi<br /><table><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_arheološkanajdišča0.png" /></td><td>arheološka najdišča</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_drugiobjektiinnaprave1.png" /></td><td>drugi objekti in naprave</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_kulturnakrajina2.png" /></td><td>kulturna krajina</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_naseljainnjihovideli3.png" /></td><td>naselja in njihovi deli</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_ostalo4.png" /></td><td>ostalo</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_parkiinvrtovi5.png" /></td><td>parki in vrtovi</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_spominskiobjektiinkraji6.png" /></td><td>spominski objekti in kraji</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_stavbe7.png" /></td><td>stavbe</td></tr><tr><td style="text-align: center;"><img src="legend/mkrkd2018izbranivnosi_1_stavbesparkializvrtovi8.png" /></td><td>stavbe s parki ali z vrtovi</td></tr></table>': layer_mkrkd2018izbranivnosi_1,"OpenStreetMap": layer_OpenStreetMap_0,}).addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
             layer: layer_mkrkd2018izbranivnosi_1,
